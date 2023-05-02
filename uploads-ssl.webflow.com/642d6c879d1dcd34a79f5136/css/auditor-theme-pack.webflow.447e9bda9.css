@@ -7214,9 +7214,9 @@ blockquote {
 }
 
 @media screen and (max-width: 479px) {
-    .section-h-wrapper {
+    /* .section-h-wrapper {
         margin-top: 20px;
-    }
+    } */
     .heading-h3 {
         margin-right: 0;
     }
