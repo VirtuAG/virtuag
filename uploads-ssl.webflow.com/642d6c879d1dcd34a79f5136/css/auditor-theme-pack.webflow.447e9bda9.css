@@ -3511,7 +3511,7 @@ blockquote {
     background-color: #ece16a;
     position: absolute;
     top: 0%;
-    bottom: 0%;
+    bottom: 10%;
     left: 0%;
     right: 0%;
     overflow: hidden;
@@ -6733,8 +6733,8 @@ blockquote {
         font-size: 1.2rem;
     }
     .section-v-wrapper {
-        padding-top: 6rem;
-        padding-bottom: 12rem;
+        padding-top: 1rem;
+        padding-bottom: 6rem;
     }
     .section-v-wrapper.x-reduced {
         padding-top: 5rem;
