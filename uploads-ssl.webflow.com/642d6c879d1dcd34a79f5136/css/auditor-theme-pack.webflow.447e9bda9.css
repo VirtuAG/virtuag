@@ -6734,7 +6734,7 @@ blockquote {
     }
     .section-v-wrapper {
         padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-bottom: 12rem;
     }
     .section-v-wrapper.x-reduced {
         padding-top: 5rem;
@@ -7215,7 +7215,7 @@ blockquote {
 
 @media screen and (max-width: 479px) {
     .section-h-wrapper {
-        margin-top: 85px;
+        margin-top: 0px;
     }
     .heading-h3 {
         margin-right: 0;
