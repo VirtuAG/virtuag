@@ -6734,7 +6734,7 @@ blockquote {
     }
     .section-v-wrapper {
         padding-top: 0rem;
-        padding-bottom: 6rem;
+        padding-bottom: 0rem;
     }
     .section-v-wrapper.x-reduced {
         padding-top: 5rem;
