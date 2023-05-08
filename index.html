@@ -34,6 +34,58 @@
 </head>
 
 <body>
+        <script>
+        var lastScrollTop = 0;
+        var width = $("body").width();
+
+        if (width > 991) {
+            $(window).on('scroll', function() {
+                st = $(this).scrollTop();
+
+                if (st < lastScrollTop) {
+                    if (window.pageYOffset > 500) {
+                        $(".navbar_menu").css({
+                            "width": "39rem",
+                            "overflow": "visible"
+                        });
+                        $(".menu_button").css({
+                            "opacity": "1"
+                        });
+                    } else {
+                        $(".navbar_menu").css({
+                            "width": "30rem",
+                            "overflow": "hidden"
+                        });
+                        $(".menu_button").css({
+                            "opacity": "0"
+                        });
+                    }
+
+                } else {
+                    if (window.pageYOffset > 100) {
+                        $(".navbar_menu").css({
+                            "width": "39rem",
+                            "overflow": "visible"
+                        });
+                        $(".menu_button").css({
+                            "opacity": "1"
+                        });
+                    } else {
+                        $(".navbar_menu").css({
+                            "width": "30rem",
+                            "overflow": "hidden"
+                        });
+                        $(".menu_button").css({
+                            "opacity": "0"
+                        });
+                    }
+                }
+                lastScrollTop = st;
+            });
+        }
+
+        });
+    </script>
     <div class="page-wrapper">
         <div bind="4f34a39c-fda6-7dca-a9ad-8e431021bb2b" class="global-styles w-embed">
             <style>
@@ -836,76 +888,7 @@ a,
     <script src="https://uploads-ssl.webflow.com/645368a53ff4653a8c96f3a4/js/webflow.9a5502357.js" type="text/javascript"></script>
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
     <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
-    <script>
-        var lastScrollTop = 0;
-        var width = $("body").width();
 
-        if (width > 991) {
-            $(window).on('scroll', function() {
-                st = $(this).scrollTop();
-
-                if (st < lastScrollTop) {
-                    if (window.pageYOffset > 500) {
-                        $(".navbar_menu").css({
-                            "width": "39rem",
-                            "overflow": "visible"
-                        });
-                        $(".menu_button").css({
-                            "opacity": "1"
-                        });
-                    } else {
-                        $(".navbar_menu").css({
-                            "width": "30rem",
-                            "overflow": "hidden"
-                        });
-                        $(".menu_button").css({
-                            "opacity": "0"
-                        });
-                    }
-
-                } else {
-                    if (window.pageYOffset > 100) {
-                        $(".navbar_menu").css({
-                            "width": "39rem",
-                            "overflow": "visible"
-                        });
-                        $(".menu_button").css({
-                            "opacity": "1"
-                        });
-                    } else {
-                        $(".navbar_menu").css({
-                            "width": "30rem",
-                            "overflow": "hidden"
-                        });
-                        $(".menu_button").css({
-                            "opacity": "0"
-                        });
-                    }
-                }
-                lastScrollTop = st;
-            });
-        }
-
-        function calcTime(offset) {
-            var b = new Date()
-            var utc = b.getTime() + (b.getTimezoneOffset() * 60000);
-            var nd = new Date(utc + (3600000 * offset));
-            return nd.toLocaleString([], {
-                hour: '2-digit',
-                minute: '2-digit'
-            });
-        }
-
-        function runauto() {
-            //get specific country time
-            $(".local-time").text(calcTime('+5'));
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            runauto();
-            setInterval(runauto, 60 * 1000); // refresh every 60 seconds
-        });
-    </script>
 </body>
 
 </html>
